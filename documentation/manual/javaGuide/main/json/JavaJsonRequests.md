@@ -81,7 +81,7 @@ public static Result sayHello() {
   ObjectNode result = Json.newObject();
   String name = json.findPath("name").getTextValue();
   if(name == null) {
-    result.put("status", "KO");
+    result.put("status", "OK");
     result.put("message", "Missing parameter [name]");
     return badRequest(result);
   } else {
